@@ -1,0 +1,126 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+/* Table Container */
+#planets {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table Headers */
+#planets th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 15px;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #5a67d8;
+}
+
+#planets th:first-child {
+  background: linear-gradient(135deg, #434343 0%, #000000 100%);
+  text-align: left;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Table Cells */
+#planets td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1em;
+  color: #374151;
+}
+
+#planets td:first-child {
+  background: #f9fafb;
+  font-weight: 600;
+  text-align: left;
+  color: #1f2937;
+  font-style: italic;
+  border-right: 2px solid #e5e7eb;
+}
+
+/* Alternating Row Colors */
+#planets tr:nth-child(even) {
+  background: #fafafa;
+}
+
+#planets tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* Hover Effect */
+#planets tr:hover {
+  background: #f3f4f6;
+  transition: background 0.3s ease;
+}
+
+#planets tr:first-child:hover {
+  background: transparent;
+}
+
+/* Image Styling */
+#planets img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#planets img:hover {
+  transform: scale(1.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  #planets th,
+  #planets td {
+    padding: 12px 8px;
+    font-size: 0.9em;
+  }
+  
+  #planets img {
+    width: 60px;
+    height: 60px;
+  }
+}
